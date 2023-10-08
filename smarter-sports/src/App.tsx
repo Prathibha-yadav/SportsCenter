@@ -1,11 +1,21 @@
-import React from 'react'
+import { useContext } from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
+import { ThemeContext } from "./context/theme";
 
-function App() {
+
+const App = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <>
-      <h1>Welcome React !!</h1>
-    </>
-  )
-}
-
-export default App
+    <div
+      className={`h-screen w-full mx-auto py-2 ${
+        theme === "dark" ? "dark" : ""
+      }`}
+    >
+      
+          <RouterProvider router={router} />
+         
+    </div>
+  );
+};
+export default App;
