@@ -8,9 +8,10 @@ import Notfound from "../pages/Notfound";
 // import { Outlet } from "react-router-dom";
 
 import { createBrowserRouter, Navigate } from "react-router-dom";
+import Articles from "../pages/articles/Articles";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Navigate to="/account/projects" replace /> },
+  { path: "/", element: <Navigate to="/articles" replace /> },
   {
     path: "/signin",
     element: <Signin />,
@@ -33,12 +34,9 @@ const router = createBrowserRouter([
   },
   // Protected Routes
   {
-    path: "/account",
-    element: (
-      <ProtectedRoutes>
-        <AccountLayout />
-      </ProtectedRoutes>
-    ),
+    path: "/articles",
+    element: 
+     <Articles />,
     children: [],
   },
 ]);

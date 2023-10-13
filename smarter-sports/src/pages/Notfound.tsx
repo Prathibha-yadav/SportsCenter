@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Notfound: React.FC = () => {
   const navigate = useNavigate();
   const ButtonClick = () => {
-    navigate("/account");
+    navigate("/articles");
   };
   return (
     <div className="flex flex-col justify-center items-center h-screen">
