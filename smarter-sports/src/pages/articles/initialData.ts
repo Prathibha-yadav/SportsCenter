@@ -12,6 +12,6 @@ export const initialArticles = [
       summary: "Summary for Article 2",
       thumbnail: "article2.jpg",
     },
-    // Add more articles as needed
+    
   ];
   

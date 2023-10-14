@@ -32,12 +32,10 @@ const router = createBrowserRouter([
     path: "*",
     element: <Notfound />,
   },
-  // Protected Routes
   {
     path: "/articles",
     element: 
      <Articles />,
-    children: [],
   },
 ]);
 
