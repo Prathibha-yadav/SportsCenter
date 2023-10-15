@@ -1,8 +1,11 @@
-interface Article {
+export interface Article {
     id: number;
+    sport : string,
     title: string;
     summary: string;
-    thumbnail: string; // Add a thumbnail property for the image.
+    thumbnail: string; 
+    details : string;
+    date : Date;
   }
   
   export interface ArticlesState {

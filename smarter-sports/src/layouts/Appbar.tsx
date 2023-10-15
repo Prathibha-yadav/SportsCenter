@@ -44,7 +44,7 @@ const Appbar = () => {
                     <img
                     className="h-8"
                     
-                    alt="Smarter Tasks"
+                    alt="Sports Center"
                   />
                 </div>
                 <div className="hidden md:block">
