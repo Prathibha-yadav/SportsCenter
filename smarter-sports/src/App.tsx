@@ -13,11 +13,13 @@ const App = () => {
         theme === "dark" ? "dark" : ""
       }`}
     >
-       <ArticlesProvider>
-          <RouterProvider router={router} />
-       </ArticlesProvider>
-         
+      <ArticlesProvider>
+       
+              <RouterProvider router={router} />
+        
+      </ArticlesProvider>
     </div>
   );
 };
+
 export default App;

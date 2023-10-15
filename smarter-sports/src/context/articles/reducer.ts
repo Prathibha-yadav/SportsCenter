@@ -5,7 +5,7 @@ export interface Article {
     summary: string;
     thumbnail: string; 
     details : string;
-    date : Date;
+
   }
   
   export interface ArticlesState {
