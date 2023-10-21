@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useArticlesState } from '../../context/articles/context';
 import ArticleModal from './ArticleModal'; // Import the modal component
 
 const ArticleListItems = () => {
-  const state: any = useArticlesState();
+  const state = useArticlesState();
   const { articles, isLoading, isError, errorMessage } = state;
   const [selectedArticle, setSelectedArticle] = useState(null);
-
+  console.log(articles);
   const openModal = (article : any) => {
     setSelectedArticle(article);
   };
@@ -25,14 +24,13 @@ const ArticleListItems = () => {
 
   return (
     <div className="grid grid-cols-1">
-      {articles.map((article: any) => (
+      {articles.map((article) => (
         <div key={article.id}>
           <div className="flex w-3/4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transform hover:scale-10 mb-4">
             <div className="w-3/4 p-4">
-            <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{article.sport}</p>
               <h5 className="text-xl font-medium text-gray-900 dark:text-white">{article.title}</h5>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{article.summary}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{article.date}</p>
+
               <button onClick={() => openModal(article)}>Read More</button>
             </div>
             <div className="w-1/4">

@@ -1,14 +1,21 @@
 // Articles.tsx
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 const ArticleList = React.lazy(() => import("./ArticleList"));
 import ArticleContainer from "./ArticleContainer";
 import ErrorBoundary from "../../components/ErrorBoundary";
-import AccountLayout from "../../layouts";
+import { useArticlesDispatch } from "../../context/articles/context";
+import { fetchArticles } from "../../context/articles/actions";
 
 const Articles = () => {
+  const dispacth = useArticlesDispatch();
+ 
+
+  useEffect(() => {
+    fetchArticles(dispacth);
+   
+  }, []);
   return (
     <>
-    <AccountLayout/>
       <div className="flex justify-between">
         <h2 className="text-2xl font-medium tracking-tight text-slate-700">
           Articles

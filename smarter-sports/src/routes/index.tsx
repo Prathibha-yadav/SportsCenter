@@ -5,10 +5,15 @@ import Notfound from "../pages/Notfound";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Articles from "../pages/articles/Articles";
 import LiveScore from "../pages/scores/LiveScore";
+import Home from "../pages/Home";
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <Navigate to="/articles" replace /> },
+  { path: "/", element: <Navigate to="/Home" replace /> },
+  {
+    path: "/Home",
+    element: <Home />,
+  },
   {
     path: "/signin",
     element: <Signin />,

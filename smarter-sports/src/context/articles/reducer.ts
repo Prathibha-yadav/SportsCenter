@@ -26,7 +26,7 @@ export interface Article {
     | { type: 'FETCH_ARTICLES_REQUEST' }
     | { type: 'FETCH_ARTICLES_SUCCESS'; payload: Article[] }
     | { type: 'FETCH_ARTICLES_FAILURE'; payload: string }
-    | { type: 'ADD_ARTICLE_SUCCESS'; payload: Article }; // Rename actions.
+
   
   export const reducer = (state: ArticlesState = initialState, action: ArticlesActions): ArticlesState => {
     switch (action.type) {
@@ -48,10 +48,8 @@ export interface Article {
           isError: true,
           errorMessage: action.payload,
         };
-      case 'ADD_ARTICLE_SUCCESS':
-        return { ...state, articles: [...state.articles, action.payload] };
       default:
         return state;
     }
   };
-  
+  export type ArticleDispatch = React.Dispatch<ArticlesActions>

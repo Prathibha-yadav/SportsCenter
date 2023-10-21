@@ -1,10 +1,9 @@
 import React, { createContext, useContext, useReducer } from "react";
-import { reducer, initialState, ArticlesState, ArticlesActions } from "./reducer"; // Create a new reducer and initialState for articles.
+import { reducer, initialState, ArticlesState, ArticleDispatch } from "./reducer"; 
 
-const ArticlesStateContext = createContext<ArticlesState | undefined>(undefined); // Rename the context.
-type ArticlesDispatch = React.Dispatch<ArticlesActions>;
+const ArticlesStateContext = createContext<ArticlesState>(initialState); 
 
-const ArticlesDispatchContext = createContext<ArticlesDispatch | undefined>(undefined); // Rename the context.
+const ArticlesDispatchContext = createContext<ArticleDispatch>(() => {}); 
 
 export const ArticlesProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
