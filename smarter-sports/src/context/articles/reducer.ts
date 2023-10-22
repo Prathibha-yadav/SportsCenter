@@ -1,10 +1,10 @@
 export interface Article {
     id: number;
-    sport : string,
     title: string;
     summary: string;
     thumbnail: string; 
-    details : string;
+    date : string;
+    content : string;
 
   }
   
@@ -28,7 +28,10 @@ export interface Article {
     | { type: 'FETCH_ARTICLES_FAILURE'; payload: string }
 
   
-  export const reducer = (state: ArticlesState = initialState, action: ArticlesActions): ArticlesState => {
+  export const reducer = (
+    state: ArticlesState = initialState, 
+    action: ArticlesActions
+    ): ArticlesState => {
     switch (action.type) {
       case 'FETCH_ARTICLES_REQUEST':
         return {

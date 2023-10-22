@@ -11,9 +11,9 @@ function Home() {
           <Appbar />
         </ErrorBoundary>
         <div className="flex w-full justify-center">
-          {/* <ErrorBoundary>
+          <ErrorBoundary>
             <LiveScore />
-          </ErrorBoundary> */}
+          </ErrorBoundary>
         </div>
         <div className="py-2 px-4">
           <ErrorBoundary>

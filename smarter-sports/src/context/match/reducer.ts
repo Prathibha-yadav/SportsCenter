@@ -1,10 +1,10 @@
-// matchesTypes.ts
-
 export interface Match {
     id: number;
-    place : string,
-    score1  : string,
-    score2 : string,
+    isRunning : boolean,
+    name : string,
+    location  : string,
+    sportName : string,
+    endsAt : string,
   }
   
   export interface MatchesState {
@@ -25,7 +25,7 @@ export interface Match {
     | { type: 'FETCH_MATCHES_REQUEST' }
     | { type: 'FETCH_MATCHES_SUCCESS'; payload: Match[] }
     | { type: 'FETCH_MATCHES_FAILURE'; payload: string }
-    | { type: 'ADD_MATCH_SUCCESS'; payload: Match }; // Rename actions.
+    
   
   export const reducer = (
     state: MatchesState = initialState,
@@ -50,10 +50,9 @@ export interface Match {
           isError: true,
           errorMessage: action.payload,
         };
-      case 'ADD_MATCH_SUCCESS':
-        return { ...state, matches: [...state.matches, action.payload] };
+     
       default:
         return state;
     }
   };
-  
+  export type MatchDispatch = React.Dispatch<MatchesActions>

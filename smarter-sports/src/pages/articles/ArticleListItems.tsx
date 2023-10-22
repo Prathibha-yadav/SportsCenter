@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useArticlesState } from '../../context/articles/context';
-import ArticleModal from './ArticleModal'; // Import the modal component
+import ArticleModal from './ArticleModal';
 
 const ArticleListItems = () => {
   const state = useArticlesState();
   const { articles, isLoading, isError, errorMessage } = state;
   const [selectedArticle, setSelectedArticle] = useState(null);
-  console.log(articles);
+  // console.log(articles);
   const openModal = (article : any) => {
     setSelectedArticle(article);
   };
@@ -30,7 +30,7 @@ const ArticleListItems = () => {
             <div className="w-3/4 p-4">
               <h5 className="text-xl font-medium text-gray-900 dark:text-white">{article.title}</h5>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{article.summary}</p>
-
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{article.date}</p>
               <button onClick={() => openModal(article)}>Read More</button>
             </div>
             <div className="w-1/4">

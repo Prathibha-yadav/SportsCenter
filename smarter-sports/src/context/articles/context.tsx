@@ -2,7 +2,6 @@ import React, { createContext, useContext, useReducer } from "react";
 import { reducer, initialState, ArticlesState, ArticleDispatch } from "./reducer"; 
 
 const ArticlesStateContext = createContext<ArticlesState>(initialState); 
-
 const ArticlesDispatchContext = createContext<ArticleDispatch>(() => {}); 
 
 export const ArticlesProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
@@ -16,5 +15,5 @@ export const ArticlesProvider: React.FC<React.PropsWithChildren> = ({ children }
   );
 };
 
-export const useArticlesState = () => useContext(ArticlesStateContext); // Rename the hooks.
+export const useArticlesState = () => useContext(ArticlesStateContext); 
 export const useArticlesDispatch = () => useContext(ArticlesDispatchContext);
