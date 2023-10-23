@@ -1,12 +1,10 @@
 // sportsContext.tsx
 
 import React, { createContext, useContext, useReducer } from "react";
-import { reducer, initialState, SportsState, SportsActions } from "./reducer";
+import { reducer, initialState, SportsState, SportDispatch,  } from "./reducer";
 
-const SportsStateContext = createContext<SportsState | undefined>(undefined);
-type SportsDispatch = React.Dispatch<SportsActions>;
-
-const SportsDispatchContext = createContext<SportsDispatch | undefined>(undefined);
+const SportsStateContext = createContext<SportsState>(initialState);
+const SportsDispatchContext = createContext<SportDispatch>(() => {});
 
 export const SportsProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);

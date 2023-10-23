@@ -1,5 +1,3 @@
-// sportsTypes.ts
-
 export interface Sport {
     id: number;
     sport: string;
@@ -24,7 +22,6 @@ export interface Sport {
     | { type: 'FETCH_SPORTS_REQUEST' }
     | { type: 'FETCH_SPORTS_SUCCESS'; payload: Sport[] }
     | { type: 'FETCH_SPORTS_FAILURE'; payload: string }
-    | { type: 'ADD_SPORT_SUCCESS'; payload: Sport }; // Rename actions.
   
   export const reducer = (
     state: SportsState = initialState,
@@ -49,10 +46,8 @@ export interface Sport {
           isError: true,
           errorMessage: action.payload,
         };
-      case 'ADD_SPORT_SUCCESS':
-        return { ...state, sports: [...state.sports, action.payload] };
       default:
         return state;
     }
   };
-  
+  export type SportDispatch = React.Dispatch<SportsActions>

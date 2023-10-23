@@ -23,7 +23,6 @@ export interface Team {
     | { type: 'FETCH_TEAMS_REQUEST' }
     | { type: 'FETCH_TEAMS_SUCCESS'; payload: Team[] }
     | { type: 'FETCH_TEAMS_FAILURE'; payload: string }
-    | { type: 'ADD_TEAM_SUCCESS'; payload: Team }; // Rename actions.
   
   export const reducer = (
     state: TeamsState = initialState,
@@ -48,10 +47,8 @@ export interface Team {
           isError: true,
           errorMessage: action.payload,
         };
-      case 'ADD_TEAM_SUCCESS':
-        return { ...state, teams: [...state.teams, action.payload] };
       default:
         return state;
     }
   };
-  
+  export type TeamDispatch = React.Dispatch<TeamsActions>

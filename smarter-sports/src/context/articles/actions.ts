@@ -12,7 +12,7 @@ export const fetchArticles = async (dispatch: ArticleDispatch) => {
       throw new Error("Failed to Fetch Articles")
   };
     const data = await response.json();
-    // console.log(data)
+     console.log(data)
     
     dispatch({ type: "FETCH_ARTICLES_SUCCESS", payload: data });
   } catch (error) {
