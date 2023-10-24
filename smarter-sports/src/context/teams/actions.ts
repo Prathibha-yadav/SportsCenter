@@ -10,7 +10,7 @@ export const fetchTeams = async (dispatch: TeamDispatch) => {
       headers: { 'Content-Type': 'application/json',  },
     });
     const data = await response.json();
-    console.log(data)
+    // console.log(data)
     dispatch({ type: "FETCH_TEAMS_SUCCESS", payload: data.teams });
   } catch (error) {
     console.log('Error fetching teams:', error);

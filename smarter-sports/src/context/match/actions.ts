@@ -13,7 +13,7 @@ export const fetchMatches = async (dispatch: MatchDispatch) => {
       throw new Error("Failed to Fetch match details")
   };
     const data = await response.json();
-    console.log(data)
+    // console.log(data)
     
     dispatch({ type: "FETCH_MATCHES_SUCCESS", payload: data.matches });
   } catch (error) {
