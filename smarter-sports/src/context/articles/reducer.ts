@@ -7,6 +7,7 @@ export interface Article {
     content : string;
 
   }
+  export type SelectedArticle = Article | null;
   
   export interface ArticlesState {
     articles: Article[];

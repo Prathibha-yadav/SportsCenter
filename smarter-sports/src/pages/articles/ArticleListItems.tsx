@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useArticlesState } from '../../context/articles/context';
 import ArticleModal from './ArticleModal';
-
+import { SelectedArticle } from '../../context/articles/reducer';
 const ArticleListItems = () => {
   const state = useArticlesState();
   const { articles, isLoading, isError, errorMessage } = state;
-  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [selectedArticle, setSelectedArticle] = useState<SelectedArticle | null>(null);
   // console.log(articles);
   const openModal = (article : any) => {
     setSelectedArticle(article);
@@ -54,7 +54,7 @@ const ArticleListItems = () => {
         </div>
       ))}
       {selectedArticle && (
-        <ArticleModal article={selectedArticle} onClose={closeModal} />
+        <ArticleModal article={selectedArticle} onClose={closeModal}  id={selectedArticle.id}/>
       )}
     </div>
   );
