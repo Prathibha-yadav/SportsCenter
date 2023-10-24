@@ -29,8 +29,8 @@ const Appbar = () => {
   }
 
   const navigation = [
-    { name: 'Projects', href: '/account/projects', current: false },
-    { name: 'Members', href: '/account/members', current: false },
+    { name: 'SignUp', href: '/signup', current: false },
+    { name: 'SignIn', href: '/signin', current: false },
   ]
 
   return (

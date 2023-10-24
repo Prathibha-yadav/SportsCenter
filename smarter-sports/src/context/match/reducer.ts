@@ -5,6 +5,7 @@ export interface Match {
     location  : string,
     sportName : string,
     endsAt : string,
+    teams : [{id : number, name : string},{id : number, name : string}],
   }
   
   export interface MatchesState {

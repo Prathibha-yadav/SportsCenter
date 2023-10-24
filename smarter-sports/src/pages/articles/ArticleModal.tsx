@@ -26,18 +26,24 @@ const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="bg-white p-4 max-w-md rounded-lg shadow-lg" ref={modalRef}>
-        <button
-          className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-          onClick={onClose}
-        >
-          X
-        </button>
+      <div className="flex justify-end">
+  <button
+    className="bg-red-500 text-white px-4 py-2 rounded-lg mt-4"
+    onClick={onClose}
+  >
+    X
+  </button>
+</div>
+
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
         <div className="relative rounded-md overflow-hidden max-h-60">
           <img src={article.thumbnail} alt={article.title} className="w-full h-full object-cover" />
         </div>
         <div className="max-h-32 overflow-y-auto">
           <p className="text-gray-700">{article.summary}</p>
+          <p className="my-6 text-md md:text-xl leading-normal md:leading-8 text-gray-600">
+                              {article?.content}
+                            </p>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
           {new Date(article.date).toLocaleString('en-US', {
