@@ -58,8 +58,8 @@ const ArticleModal: React.FC<ArticleModalProps & { id: number }> = ({ article, o
   }, [id]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-white p-4 max-w-md rounded-lg shadow-lg" ref={modalRef}>
+    <div className="fixed flex  inset-1 items-center justify-center w-10/12">
+      <div className="bg-white  p-4  rounded-lg shadow-lg" ref={modalRef}>
         <div className="flex justify-end">
           <button
             className="bg-red-500 text-white px-4 py-2 rounded-lg mt-4"
@@ -76,7 +76,7 @@ const ArticleModal: React.FC<ArticleModalProps & { id: number }> = ({ article, o
         <div className="max-h-32 overflow-y-auto">
           <p className="text-gray-700">{article.summary}</p>
           {articleContent && (
-            <p className="my-6 text-md md:text-xl leading-normal md:leading-8 text-gray-600">
+            <p className="mt-4 text-gray-800">
               {articleContent.content}
             </p>
           )}

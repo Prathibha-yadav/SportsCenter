@@ -1,13 +1,21 @@
 export interface Match {
-    id: number;
-    isRunning : boolean,
-    name : string,
-    location  : string,
-    sportName : string,
-    endsAt : string,
-    teams : [{id : number, name : string},{id : number, name : string}],
-  }
-  
+  id: number;
+  isRunning: boolean;
+  name: string;
+  location: string;
+  sportName: string;
+  endsAt: string;
+  score: {
+    [teamName: string]: string;
+  };
+  teams: [{ id: number; name: string }];
+  startsAt: string; 
+  playingTeam: number; 
+  story: string; 
+}
+
+export type SelectedMatch = Match ;
+
   export interface MatchesState {
     matches: Match[];
     isLoading: boolean;

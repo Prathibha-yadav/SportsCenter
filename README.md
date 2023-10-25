@@ -1,1 +1,1 @@
-SportsHub
+Sports Center

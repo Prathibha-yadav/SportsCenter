@@ -30,7 +30,7 @@ const ArticleListItems = () => {
             <div className="w-3/4 p-4">
               <h5 className="text-xl font-medium text-gray-900 dark:text-white">{article.title}</h5>
               <p className="text-gray-700">
-              {article.summary.split(' ').slice(0, 3).join(' ')}{article.summary.split(' ').length > 3 ? '...' : ''}
+              {article.summary.split(' ').slice(0, 12).join(' ')}{article.summary.split(' ').length > 3 ? '...' : ''}
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
   {new Date(article.date).toLocaleString('en-US', {
