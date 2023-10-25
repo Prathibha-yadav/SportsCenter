@@ -93,18 +93,17 @@ const MatchModal: React.FC<{ id: number }> = ({ id }) => {
                   </Dialog.Title>
                 </div>
                 <p className="text-gray-700">
-                  <span className="text-indigo-600 font-bold pr-2">{matchContent.sportName}</span>
+                  <span className="text-black-600 font-bold pr-2">{matchContent.sportName}</span>
                 </p>
-                <p className="text-gray-700">{matchContent.location}</p>
+                
                 <div className="mt-2 text-gray-700">
-                  <p>Starts at: {new Date(matchContent.startsAt).toLocaleString("en-US", {
+                  <p><span className="text-b font-bold">Starts at:</span> {new Date(matchContent.startsAt).toLocaleString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
                     hour: "2-digit",
                     minute: "2-digit",
-                  })}</p>
-                  <p>Ends at: {new Date(matchContent.endsAt).toLocaleString("en-US", {
+                  })}<span className="text-b font-bold"> Ends at:</span> {new Date(matchContent.endsAt).toLocaleString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -112,7 +111,7 @@ const MatchModal: React.FC<{ id: number }> = ({ id }) => {
                     minute: "2-digit",
                   })}</p>
                 </div>
-
+                <p className="text-gray-700">{matchContent.location}</p>
                 <h4 className="font-semibold mt-4 text-gray-800">Scores:</h4>
                 <ul className="flex gap-4 text-gray-700">
                   {Object.entries(matchContent.score).map(([team, score]) => (

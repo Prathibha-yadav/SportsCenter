@@ -58,7 +58,7 @@ const ArticleModal: React.FC<ArticleModalProps & { id: number }> = ({ article, o
   }, [id]);
 
   return (
-    <div className="fixed flex  inset-1 items-center justify-center w-10/12">
+    <div className="fixed flex  inset-1 items-center justify-center w-10/12 ">
       <div className="bg-white  p-4  rounded-lg shadow-lg" ref={modalRef}>
         <div className="flex justify-end">
           <button
