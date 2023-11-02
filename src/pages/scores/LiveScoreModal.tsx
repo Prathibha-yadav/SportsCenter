@@ -35,7 +35,7 @@ const MatchModal: React.FC<{ id: number }> = ({ id }) => {
       }
 
       const data = await response.json();
-      console.log(data)
+      //console.log(data)
       setMatchContent(data);
     } catch (error) {
       console.error("Error fetching match details", error);

@@ -1,12 +1,16 @@
 export interface Article {
+  id: number;
+  title: string;
+  summary: string;
+  thumbnail: string;
+  date: string;
+  content: string;
+  sport: {
     id: number;
-    title: string;
-    summary: string;
-    thumbnail: string; 
-    date : string;
-    content : string;
+    name: string;
+  };
+}
 
-  }
   export type SelectedArticle = Article | null;
   
   export interface ArticlesState {
