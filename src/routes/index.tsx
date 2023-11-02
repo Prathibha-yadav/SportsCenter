@@ -54,6 +54,10 @@ const router = createBrowserRouter([
     element: 
     <LiveScore />,
   },
+  {
+    path: "/dashboard",
+    element: <Home />,
+  },
 ]);
 
 export default router;

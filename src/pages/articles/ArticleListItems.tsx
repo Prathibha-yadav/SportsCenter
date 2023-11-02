@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useArticlesState } from '../../context/articles/context';
 import ArticleModal from './ArticleModal';
 import { SelectedArticle } from '../../context/articles/reducer';
@@ -7,7 +7,7 @@ const ArticleListItems = () => {
   const state = useArticlesState();
   const { articles, isLoading, isError, errorMessage } = state;
   const [selectedArticle, setSelectedArticle] = useState<SelectedArticle | null>(null);
-  const [selectedSport, setSelectedSport] = useState<string>('All'); // Default to 'All'
+  const [selectedSport, setSelectedSport] = useState<string>('All'); 
 
   const openModal = (article: any) => {
     setSelectedArticle(article);
@@ -37,7 +37,7 @@ const ArticleListItems = () => {
             onClick={() => setSelectedSport(sport)}
             className={`${
               selectedSport === sport
-                ? 'bg-blue-500 text-white'
+                ? 'bg-blue-900 text-white'
                 : 'bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900'
             } rounded-lg px-4 py-2`}
           >
