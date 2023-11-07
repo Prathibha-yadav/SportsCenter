@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom"
 import { ThemeContext } from '../context/theme'
 
 const userNavigation = [
-  { name: 'Profile', href: '#' },
+  { name: 'Preferences', href: '#' },
   { name: 'Sign out', href: '/logout' },
 ]
 
