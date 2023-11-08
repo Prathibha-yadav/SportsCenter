@@ -2,8 +2,7 @@ import { useEffect, useState, Fragment } from "react";
 import { API_ENDPOINT } from "../../config/constants";
 import { Dialog, Transition } from "@headlessui/react";
 import { Match } from "../../context/match/reducer";
-import { faSync } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 
