@@ -47,7 +47,7 @@ const FavoritesModal: React.FC<{ id: number }> = ({ id }) => {
 
   return (
     <>
-      <h1>
+      {/* <h1>
         {matchContent && (
           <ul className="flex gap-4 text-md text-gray-900 justify-between mt-2">
             {Object.entries(matchContent.score).map(([team, score]) => (
@@ -57,7 +57,7 @@ const FavoritesModal: React.FC<{ id: number }> = ({ id }) => {
             ))}
           </ul>
         )}
-      </h1>
+      </h1> */}
       <div className="relative flex justify-left">
         <button type="button" onClick={openModal} style={{ color: "blue" }}>
           View details
