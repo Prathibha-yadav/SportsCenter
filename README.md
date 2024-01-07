@@ -1,6 +1,6 @@
 # Sports Center
+Live Application Link: [Sports Center](https://endearing-kataifi-3acb83.netlify.app/Home)
 
-## WD301 Capstone Project Read Me
 
 ## Project Overview
 
@@ -71,5 +71,3 @@ To set up the project locally, follow these steps:
 1. Clone the repository.
 2. Install dependencies using `npm install`.
 3. Run the application with `npm start`.
-
-Feel free to explore and contribute to the development of this dynamic sports news platform. Your feedback and contributions are highly appreciated!
