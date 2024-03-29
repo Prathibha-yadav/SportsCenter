@@ -8,32 +8,31 @@ This repository contains the implementation details for the WD301 capstone proje
 
 ## High-level Features
 
-### 1. Browse Sports News
+### Browse Sports News
 
 - Users can view a list of sports news articles.
 - Each article displays the title, summary, and thumbnail image.
 - Full content is accessible by clicking on a news article.
 
-### 2. Filter News Articles
+- <img width="960" alt="Screenshot 2024-03-29 201244" src="https://github.com/Prathibha-yadav/SportsCenter/assets/126705101/2efafd5e-52eb-47e9-acce-d3ebcd7a5786">
+
+
+### Filter News Articles
 
 - Users can filter news articles by sport.
 - Dynamic updates without a page reload.
 
-### 3. View Live Scores and Match Details
+- <img width="960" alt="Screenshot 2024-03-29 201342" src="https://github.com/Prathibha-yadav/SportsCenter/assets/126705101/75eba194-bae9-4195-ba1b-af99476da89d">
+
+
+### View Live Scores and Match Details
 
 - Users can see ongoing matches with scores.
 - Details include teams playing, current score, and other relevant information.
 - Option for manual score refresh.
 
-### 4. Personalize Dashboard
+- <img width="960" alt="Screenshot 2024-03-29 201311" src="https://github.com/Prathibha-yadav/SportsCenter/assets/126705101/88d218c5-faf4-4ce2-9b98-99a453123751">
 
-- Users can create an account and sign in.
-- Signed-in users can customize dashboard preferences.
-- Preferences may include favorite sports or teams for tailored updates.
-
-## User Interface Requirements
-
-To enhance user experience, specific requirements for the user interface have been outlined for each component.
 
 ### Landing Screen
 
@@ -47,6 +46,9 @@ To enhance user experience, specific requirements for the user interface have be
 - Enables users to select a sport and team.
 - Filters used to display relevant news articles.
 
+- <img width="960" alt="Screenshot 2024-03-29 201417" src="https://github.com/Prathibha-yadav/SportsCenter/assets/126705101/99ce2de2-3674-4d67-b6c4-869784e80ced">
+
+
 ### Sign-in and Sign-up Pages
 
 - Accessible from the navigation bar on the landing page.
@@ -58,11 +60,14 @@ To enhance user experience, specific requirements for the user interface have be
 - Clicking on "Read More" opens a pop-up/modal with detailed news view.
 - Includes image and relevant content.
 
+- <img width="960" alt="Screenshot 2024-03-29 201358" src="https://github.com/Prathibha-yadav/SportsCenter/assets/126705101/6cdaccf8-d05b-4c9b-9b17-4d1a9b25360b">
+
+
 ### Preferences Screen
 
 - Accessible from the landing page as a pop-up/modal.
 - Users can select preferred sports and teams.
-- Filtering based on user preferences when logged in.
+
 
 ## Getting Started
 
