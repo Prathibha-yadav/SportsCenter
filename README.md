@@ -1,5 +1,5 @@
 # Sports Center
-Live Application Link: [Sports Center](https://endearing-kataifi-3acb83.netlify.app/Home)
+Live Application Link: [Sports Center](https://sportsxcenter.netlify.app/Home)
 
 
 ## Project Overview
